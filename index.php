@@ -26,24 +26,24 @@ class Movie{
     }
 
     public function getYear() {
-        return 'Questo film è uscito nel ' . $this->runningTime;
+        return 'Questo film è uscito nel ' . $this->year;
     }
 }
 
 $backToTheFuture = new Movie('Back to the Future');
-$backToTheFuture->year = 1985;
-$backToTheFuture->getRunningTime('116 minutes');
-var_dump($backToTheFuture);
+$backToTheFuture->setYear(1985);
+$backToTheFuture->setRunningTime('116 minutes');
+// var_dump($backToTheFuture);
 
 $backToTheFuture2 = new Movie('Back to the Future - 2');
-$backToTheFuture2->year = 1989;
+$backToTheFuture2->setYear(1989);
 $backToTheFuture2->setRunningTime('108 minutes');
-var_dump($backToTheFuture2);
+// var_dump($backToTheFuture2);
 
 $backToTheFuture3 = new Movie("Back to the Future - 3");
-$backToTheFuture3->year = 1990;
+$backToTheFuture3->setYear(1990);
 $backToTheFuture3->setRunningTime('108 minutes');
-var_dump($backToTheFuture3);
+// var_dump($backToTheFuture3);
 
 ?>
 

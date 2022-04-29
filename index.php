@@ -2,7 +2,7 @@
 
 class Movie{
     private $title;
-    public $year;
+    private $year;
     private $runningTime;
 
     public function __construct($_title) {
@@ -20,6 +20,14 @@ class Movie{
     public function getRunningTime() {
         return 'il film dura: ' . $this->runningTime;
     }
+
+    public function setYear($_year) {
+        $this->year = $_year;
+    }
+
+    public function getYear() {
+        return 'Questo film è uscito nel ' . $this->runningTime;
+    }
 }
 
 $backToTheFuture = new Movie('Back to the Future');
@@ -35,12 +43,14 @@ var_dump($backToTheFuture2);
 $backToTheFuture3 = new Movie("Back to the Future - 3");
 $backToTheFuture3->year = 1990;
 $backToTheFuture3->setRunningTime('108 minutes');
-// echo $backToTheFuture3->title;
-echo $backToTheFuture3->year;
 var_dump($backToTheFuture3);
 
 ?>
 
 <p>
     <?= $backToTheFuture3->getRunningTime() ?>
+</p>
+
+<p>
+    <?= $backToTheFuture3->getYear() ?>
 </p>
